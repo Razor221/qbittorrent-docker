@@ -35,7 +35,8 @@ RUN git clone --branch release-5.2.3 --single-branch https://github.com/qbittorr
         -DCMAKE_INSTALL_PREFIX=/usr/local \
         -DGUI=OFF \
     && cmake --build build -j$(nproc) \
-    && cmake --install build
+    && cmake --install build \
+    && strip --strip-all /usr/local/bin/qbittorrent-nox
 
 
 # Stage 2: Inject into LinuxServer's official container
