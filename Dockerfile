@@ -17,7 +17,7 @@ RUN apk add --no-cache \
 WORKDIR /build
 
 # 1. Clone & compile your libtorrent fork statically
-RUN git clone --recurse-submodules https://github.com/Razor221/libtorrent.git \
+RUN git clone --branch RC_2_0_leecher --single-branch --recurse-submodules https://github.com/Razor221/libtorrent.git \
     && cd libtorrent \
     && cmake -B build -G Ninja \
         -DCMAKE_BUILD_TYPE=Release \
