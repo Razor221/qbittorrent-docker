@@ -60,7 +60,7 @@ RUN git clone --recurse-submodules https://github.com/Razor221/libtorrent.git \
 
 # 2. Clone & compile qBittorrent release-5.2.3 in headless mode (Dynamic linking)
 
-RUN git clone --branch release-5.2.3 --single-branch https://github.com/qbittorrent/qBittorrent.git \
+RUN git clone --branch release-5.2.4 --single-branch https://github.com/qbittorrent/qBittorrent.git \
 
     && cd qBittorrent \
 
