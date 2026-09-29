@@ -49,4 +49,4 @@ RUN apk add --no-cache \
     qt6-qtbase-sqlite
 
 # Overwrite LinuxServer's stock executable with your compiled binary
-COPY --from=builder /usr/local/bin/qbittorrent-nox /usr/bin/qbittorrent-nox
+COPY --from=builder /usr/local/bin/qbittorrent-nox /app/qbittorrent-nox
