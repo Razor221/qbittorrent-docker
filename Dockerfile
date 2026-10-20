@@ -17,7 +17,7 @@ RUN apk add --no-cache \
 WORKDIR /build
 
 # 1. Clone & compile your libtorrent fork statically
-RUN git clone --branch RC_2_0_leecher --single-branch --recurse-submodules https://github.com/Razor221/libtorrent.git \
+RUN git clone --branch RC_2_1_leecher --single-branch --recurse-submodules https://github.com/Razor221/libtorrent.git \
     && cd libtorrent \
     && cmake -B build -G Ninja \
         -DCMAKE_BUILD_TYPE=Release \
@@ -29,7 +29,7 @@ RUN git clone --branch RC_2_0_leecher --single-branch --recurse-submodules https
     && cmake --install build
 
 # 2. Clone & compile qBittorrent release-5.2.4 in headless mode (Dynamic linking)
-RUN git clone --branch release-5.2.4 --single-branch https://github.com/qbittorrent/qBittorrent.git \
+RUN git clone --branch release-5.3.0 --single-branch https://github.com/qbittorrent/qBittorrent.git \
     && cd qBittorrent \
     && cmake -B build -G Ninja \
         -DCMAKE_BUILD_TYPE=Release \
