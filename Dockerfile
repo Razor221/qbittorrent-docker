@@ -19,6 +19,7 @@ WORKDIR /build
 # 1. Download and copy Boost 1.92.0 headers directly into /usr/local/include
 RUN curl -fLO https://github.com/boostorg/boost/releases/download/boost-1.92.0/boost-1.92.0-b2-nodocs.tar.gz \
     && tar -xzf boost-1.92.0-b2-nodocs.tar.gz \
+    && mkdir -p /usr/local/include \
     && cp -r boost-1.92.0/boost /usr/local/include/ \
     && rm -rf boost-1.92.0*
 
