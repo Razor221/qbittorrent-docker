@@ -37,7 +37,7 @@ RUN git clone --recurse-submodules https://github.com/Razor221/libtorrent.git \
     && rm -rf libtorrent
 
 # 3. Clone & compile qBittorrent release-5.3.0 in headless mode
-RUN git clone --branch release-5.3.0 --single-branch https://github.com/qbittorrent/qBittorrent.git \
+RUN git clone --branch release-5.3.1 --single-branch https://github.com/qbittorrent/qBittorrent.git \
     && cd qBittorrent \
     && cmake -B build -G Ninja \
         -DCMAKE_BUILD_TYPE=Release \
